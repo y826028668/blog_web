@@ -1,0 +1,124 @@
+/* 文章列表页样式 */
+.common_postListPage{
+  padding: 6.5rem 0 6.5rem 0;
+  .title{
+    h2{
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+    
+  }
+  .wrap{
+    display: flex;
+    justify-content: space-between;
+    .left{
+      width: 75%;
+      margin-right: 5rem;
+      .post_wrap{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &.animate__animated.animate__fadeIn {
+          --animate-duration: 1s;
+        }
+        .common_blockPost{
+          position: relative;
+          width: 48%;
+          height: 40rem;
+          color: #fff;
+          margin-bottom: 4rem;
+          &::after{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 35%;
+            content: "";
+            background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9));
+            z-index: 2;
+          }
+          .post_content{
+            display: none;
+          }
+          .img_wrap,
+          .post_title,
+          .post_publishMsg,
+          .img_wrap .tag{
+            position: absolute;
+          }
+          .post_title,
+          .post_publishMsg,
+          .img_wrap .tag{
+            left: 2rem;
+          }
+          .img_wrap{
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .tag{
+              top: 2rem;
+              color: #fff;
+              font-size: 1.2rem;
+              padding: 0.4rem 1.2rem;
+              border-radius: 0.3rem;
+            }
+          }
+          .post_title{
+            bottom: 5rem;
+            width: 90%;
+            font-size: 2.1rem;
+            z-index: 3;
+            a{
+              color: #fff;
+            }
+          }
+          .post_publishMsg{
+            bottom: 1.7rem;
+            color: #fff;
+            z-index: 3;
+            .author{
+              color: #fff;
+            }
+          }
+        }
+      }
+      .paging{
+        margin-top: 3rem;
+        .el-pagination{
+          text-align: center;
+          button:hover {
+            color: #3545ee;
+          }
+          .el-pager{
+            li{
+              color: rgba(34,34,34,0.6);
+              font-size: 1.5rem;
+              margin: 0 0.5rem;
+              width: 2.8rem;
+              min-width: auto;
+              &:hover,
+              &.active{
+                border-radius: 50%;
+                background: #3545ee;
+                color: #fff;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right{
+      width: 25%;
+    }
+  }
+
+}

@@ -1,0 +1,417 @@
+/* 后台管理页 */
+.admin_home {
+  height: 100%;
+
+  .el-header {
+    height: 3rem !important;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: #fff;
+    background: #303133;
+
+    .el-avatar {
+      margin-top: 0.5rem;
+      vertical-align: -29%;
+    }
+
+    span {
+      margin-right: 1rem;
+    }
+
+    .changePwd,
+    .logout {
+      cursor: pointer;
+      &:hover{
+        color: #2791ff;
+      }
+    }
+    .el-dialog__wrapper{
+      z-index: 99996 !important;
+      .el-dialog__header{
+        text-align: center;
+      }
+      .el-dialog__body{
+        padding: 4rem;
+        .el-form-item__label{
+          text-align: left;
+          width: 20% !important;
+        }
+        .el-form-item__content{
+          margin-left: 20% !important;
+          width: 80% !important;
+        }
+      }
+      .el-dialog__footer{
+        .el-button{
+          span{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .el-aside {
+    padding-top: 3rem;
+    color: #fff;
+    background: #3e4042;
+    font-size: 1.6rem;
+
+    .admin_menu {
+      text-align: center;
+      .topPost {
+        position: relative;
+        background: #fff;
+        color: #606060;
+        padding: 2rem;
+        dt{
+          border-bottom: 1px solid #606060;
+          padding-bottom: 1rem;
+          font-weight: bold;
+        }
+        dd{
+          font-size: 1.2rem;
+          margin: 1rem 0;
+          height: 3rem;
+          line-height: 3rem;
+          cursor: pointer;
+          span{
+            display: inline-block;
+            width: 80%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          button{
+            float: right;
+            padding: 0.5rem;
+          }
+        }
+        .post{
+          position: absolute;
+          right: 0;
+          top: -42rem;
+          width: 100%;
+          height: 42rem;
+          background: #fff;
+          padding: 2rem;
+          overflow: auto;
+          box-sizing: border-box;
+          border-bottom: 1px solid #ddd;
+          &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+          }
+          &::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 10px;
+            box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background   : #535353;
+          }
+          &::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background   : #ededed;
+          }
+          li{
+            margin: 0;
+            height: 2.2rem;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ddd;
+            span{
+              display: inline-block;
+              width: 80%;
+              margin-right: 1rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            button {
+              padding: 0.3rem;
+            }
+          }
+        }
+      }
+      .author {
+        margin: 0 auto;
+        margin-bottom: 3rem;
+
+        div {
+          display: inline-block;
+          overflow: hidden;
+          width: 12rem;
+          height: 12rem;
+          border-radius: 50%;
+          margin-bottom: 1.4rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          color: #fff;
+
+          &:hover {
+            color: #2791ff;
+          }
+        }
+      }
+
+      ul li {
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        cursor: pointer;
+
+        &.active {
+          background: #fc4f4b;
+        }
+
+        i {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .el-main {
+    position: relative;
+    margin: 0;
+    min-width: 120rem;
+    padding: 3rem;
+    background: #f1f2f7;
+    box-sizing: border-box;
+
+    .admin_webData {
+      padding: 2rem 3rem;
+      width: 100%;
+      height: 30%;
+      background: #fff;
+      box-sizing: border-box;
+
+      .webData_title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #222222;
+        padding-bottom: 2rem;
+        color: #303133;
+      }
+
+      .dataNum {
+        display: flex;
+        justify-content: space-around;
+
+        .dataItem {
+          position: relative;
+          width: 12rem;
+          height: 12rem;
+          border-radius: 50%;
+          text-align: center;
+          font-size: rgba(0, 0, 0,.6);
+          color: #fff;
+          font-weight: bold;
+
+          &:nth-of-type(1) {
+            background: #665BC7;
+          }
+
+          &:nth-of-type(2) {
+            background: #639D00;
+          }
+
+          &:nth-of-type(3) {
+            background: #fc4f4b;
+          }
+
+          &:nth-of-type(4) {
+            background: #E6A23C;
+          }
+
+          &:nth-of-type(5) {
+            background: #0063C6;
+          }
+
+          div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            .num {
+              margin-top: 0.8rem;
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .admin_content {
+      display: flex;
+      height: 70%;
+      padding-top: 3rem;
+      box-sizing: border-box;
+
+      h3 {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+      }
+
+      .content,
+      .delete {
+        padding: 2rem 3rem;
+        background: #fff;
+        color: #303133;
+        .table_title{
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 0;
+          color: #606266;
+          font-weight: bold;
+          border-bottom: 1px solid rgb(207, 207, 207);
+          span{
+            text-align: center;
+            &:nth-of-type(1){
+              width: 35%;
+            }
+            &:nth-of-type(2){
+              width: 35%;
+            }
+            &:nth-of-type(3){
+              width: 15%;
+            }
+            &:nth-of-type(4){
+              width: 15%;
+            }
+          }
+        }
+        .table{
+          overflow: auto;
+          height: 40rem;
+          &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+          }
+          &::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 10px;
+            box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background   : #535353;
+          }
+          &::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background   : #ededed;
+          }
+          li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.4rem;
+            color: #606266;
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            span button{
+              padding: 0.4rem 0.6rem;
+            }
+            >span{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 2.2rem;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+      .content {
+        width: 70%;
+        margin-right: 2rem;
+        overflow: hidden;
+        .search {
+          height: 4rem;
+          line-height: 4rem;
+
+          .el-button {
+            padding: 12px 20px;
+            background: darken(#409eff, 5%);
+            border: none;
+
+            &:hover {
+              background: #409eff;
+            }
+
+            &:focus {
+              background: #409eff;
+            }
+          }
+
+          .el-input {
+            float: right;
+            width: 30%;
+
+            input:focus {
+              border-color: #409eff;
+            }
+          }
+        }
+        .table{
+          li>span {
+            &:nth-of-type(1){
+              width: 35%;
+              margin-right: 1rem;
+            }
+            &:nth-of-type(2){
+              width: 35%;
+              margin-right: 1rem;
+            }
+            &:nth-of-type(3){
+              width: 15%;
+              margin-right: 1rem;
+            }
+            &:nth-of-type(4){
+              width: 15%;
+              text-align: right;
+            }
+          }
+        }
+      }
+      .delete {
+        width: 30%;
+
+        .table{
+          li>span {
+            &:nth-of-type(1){
+              width: 70%;
+              margin-right: 1rem;
+            }
+            &:nth-of-type(2){
+              width: 30%;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-message-box__wrapper {
+  z-index: 99999 !important;
+}
+.v-modal{
+  z-index: 99995 !important;
+}

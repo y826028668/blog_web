@@ -1,0 +1,77 @@
+/* 全局样式 */
+:root{
+  height: 100%;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+html {
+  font-family: Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: 62.5%;
+  color: $global-color;
+}
+
+body{
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: $global-color;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #ddd;
+  }
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fffefe;
+  }
+}
+
+.container{
+  max-width: 123rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.clearboth::after{
+  content: "";
+  display: block;
+  height: 0; 
+  clear: both;
+  visibility: hidden;
+}
+
+// 切换路由过渡效果
+.fade-enter,
+.index-enter {
+  opacity: 0;
+}
+.fade-enter-to,
+.index-enter-to {
+  opacity: 1;
+}
+.fade-enter-active,
+.index-enter-active {
+  transition: 1.5s;
+}
+.fade-leave,
+.index-leave {
+  opacity: 1;
+}
+.fade-leave-to,
+.index-leave-to {
+  opacity: 0;
+}
+.fade-leave-active,
+.index-leave-active {
+  transition: 0s;
+}

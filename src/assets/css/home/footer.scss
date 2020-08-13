@@ -1,0 +1,31 @@
+/* 底部样式 */
+footer{
+  height: 20rem !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  .common_footer {
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    h2,
+    .footer_copyright{
+      margin: 0 auto;
+      text-align: center;
+    }
+    h2 {
+      height: 7rem;
+      a{
+        display: inline-block;
+        height: 100%;
+        img{
+          height: 100%;
+        }
+      }
+    }
+    .footer_copyright{
+      margin-top: 1rem;
+    }
+    
+  }
+}

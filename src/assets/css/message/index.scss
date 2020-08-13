@@ -1,0 +1,148 @@
+/* 留言页样式 */
+.message{
+  padding: 6.5rem 0;
+  .msg_title{
+    margin-bottom: 3rem;
+  }
+  .msg_wrap{
+    display: flex;
+    justify-content: space-between;
+    
+    .left{
+      width: 75%;
+      margin-right: 5rem;
+      .common_msg{
+        h3{
+          border-bottom: 1px solid #ddd;
+          margin-bottom: 3rem;
+          line-height: 4rem;
+        }
+        .msg_paging{
+          text-align: center;
+          .el-pagination button:hover {
+            color: rgba(0,0,0,0.5);
+            &:hover{
+              color: rgba(0,0,0,0.9);
+            }
+          }
+          ul li{
+            &.active{
+              color: rgba(0,0,0,0.9);
+              font-size: 1.8rem;
+              font-weight: bold;
+            }
+            :hover{
+              color: rgba(0,0,0,0.9);
+            }
+            color: rgba(0,0,0,0.5);
+          }
+        }
+        .block_msg{
+          margin: 0 1rem 3rem 1rem;
+          padding-bottom: 1.2rem;
+          border-bottom: 1px solid #ddd;
+          img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.4rem;
+            float: left;
+            margin-right: 2rem;
+          }
+          .msg_content{
+            color: rgba(34,34,34,.6);
+            overflow: hidden;
+            .meta{
+              font-size: 1.2rem;
+              .name{
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: rgba(0,0,0,.6);
+                margin-right: 2rem;
+              }
+              .time{
+                margin-right: 2.4rem;
+              }
+              .reply{
+                color: rgba(0,0,0,.7);
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                  color: #3545ee;
+                }
+              }
+            }
+            .content{
+              margin-top: 1rem;
+              color: rgba(0,0,0,.7);
+            }
+            .admin{
+              margin-top: 1rem;
+              color: rgba(0,0,0,.7);
+              i,span{
+                color: #3545ee;
+              }
+              span{
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right{
+      width: 25%;
+    }
+  }
+}
+
+.form{
+  margin-bottom: 5rem;
+  .name,
+  .email{
+    width: 48%;
+    display: inline-block;
+  }
+  .name{
+    margin-right: 4%;
+  }
+  .name input:focus,
+  .email input:focus,
+  .content textarea:focus{
+    outline: 0;
+    border-color: rgba(0,0,0,.1);
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0,21,46,.1);
+    transition: all .2s ease-out;
+  }
+  .name input,
+  .email input,
+  .content textarea{
+    transition: all .2s ease-out;
+  }
+  .content textarea{
+    resize: none;
+  }
+  .btn{
+    margin-top: 1rem;
+    .el-checkbox__input.is-checked + .el-checkbox__label{
+      color: rgba(0,0,0,.8);
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+      background: #3545ee;
+      border-color: #3545ee;
+    }
+    .el-checkbox__inner:hover{
+      border-color: #ddd;
+    }
+    button{
+      font-size: 1.6rem;
+      border: none;
+      background-color: #3545ee;
+      transition: all .2s linear;
+      &:hover{
+        box-shadow: 0 20px 30px 0 rgba(12,0,46,.1);
+        transition: all .2s linear;
+      }
+    }
+  }
+}
