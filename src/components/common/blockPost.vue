@@ -1,13 +1,13 @@
 <template>
   <div class="common_blockPost">
     <div class="img_wrap">
-      <router-link :to="{name: post.parent + 'Type', params: { id: post._id }}">
+      <router-link :to="{name: 'post', params: { type: post.parent, id: post._id }}">
         <img :src="defaultImg">
       </router-link>
       <router-link class="tag" :style="{ backgroundColor: tagRandomBg }" :to="{name: 'searchresult', params: { text: post.tag }}">{{ post.tag }}</router-link>
     </div>
     <h5 class="post_title">
-      <router-link :to="{name: getPostType, params: { id: post._id }}" :title="post.title">{{ post.title | strShear(num) }}</router-link>
+      <router-link :to="{name: 'post', params: { type: post.parent, id: post._id }}" :title="post.title">{{ post.title | strShear(num) }}</router-link>
     </h5>
     <p class="post_content">{{ post.content || '' }}</p>
     <p class="post_publishMsg">
@@ -42,10 +42,10 @@ export default {
       return obj
     },
     // 获取文章的分类，用于跳转到对应路由
-    getPostType () {
-      if(this.postData.parent === 'skill') return 'skillType'
-      else return 'shareType'
-    },
+    // getPostType () {
+    //   if(this.postData.parent === 'skill') return 'skillType'
+    //   else return 'shareType'
+    // },
     // 文章是否有图片，如果没有使用一张默认图片进行展示
     defaultImg () {
       if (this.postData.imgSrc) return this.postData.imgSrc

@@ -50,6 +50,25 @@ body{
   visibility: hidden;
 }
 
+.el-message-box{
+  width: 30rem !important;
+  .el-message-box__btns{
+    button:nth-child(1){
+      color: #3545ee !important;
+      border-color: #3545ee !important;
+      background-color: #fff !important;
+    }
+  }
+  .el-button--primary{
+    background-color: #3545ee !important;
+    border-color: #3545ee !important;
+    &:hover{
+      background-color: #2838ec !important;
+      border-color: #2838ec !important;
+    }
+  }
+}
+
 // 切换路由过渡效果
 .fade-enter,
 .index-enter {

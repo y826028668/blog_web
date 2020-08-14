@@ -518,6 +518,10 @@
         }
       }
     }
+    .searchResult .resNull{
+      text-align: center;
+      padding: 15rem 0;
+    }
   }
 }
 
@@ -729,6 +733,43 @@
       max-width: 54rem;
       .postPage_wrap{
         padding: 0;
+        .postPage_title h2{
+          font-size: 2rem !important;
+        }
+        
+        .postPage_content{
+          .img{
+            height: 25rem !important;
+            margin-bottom: 3rem !important;
+          }
+          .content,
+          .content p{
+            text-indent: 2em;
+          }
+          .toggle_post{
+            .prev .prevTitle,
+            .next .nextTitle{
+              font-size: 1.5rem !important;
+            }
+            .prev,
+            .next{
+              padding-top: 1rem !important;
+              padding-bottom: 2rem !important;
+              span{
+                margin: 0;
+              }
+              span:nth-child(1){
+                margin-bottom: 1rem !important;
+              }
+            }
+            .next{
+              padding-left: 2rem !important;
+            }
+            .prev{
+              padding-right: 2rem !important;
+            }
+          }
+        }
         .comment_wrap .form .el-form{
           .name{
             margin-right: 0;

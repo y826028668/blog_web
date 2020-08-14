@@ -12,7 +12,7 @@
             <h3>最新文章</h3>
             <ul>
               <li class="newPost_item animate__animated animate__fadeInUp animate__delay-0.5s" v-for="item in newPostList" :key="item._id">
-                <router-link to="" >{{ item.title }}</router-link>
+                <router-link :to="{name: 'post', params: { type: item.parent, id: item._id }}" >{{ item.title }}</router-link>
               </li>
             </ul>
           </div>

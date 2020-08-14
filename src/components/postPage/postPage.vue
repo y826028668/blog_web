@@ -3,7 +3,7 @@
     <div class="postPage_wrap">
       <div class="left">
         <div class="postPage_title">
-          <router-link to="" :style="{ backgroundColor: tagRandomBg }" class="tag">{{postData.tag}}</router-link>
+          <router-link :to="{name: 'searchresult', params: { text: postData.tag }}" :style="{ backgroundColor: tagRandomBg }" class="tag">{{postData.tag}}</router-link>
           <h2>{{postData.title}}</h2>
           <span class="time"><i class="el-icon-time"></i>{{formatTime}}</span>
           <span class="views"><i class="el-icon-view"></i>{{postData.views}}</span>
@@ -95,7 +95,7 @@ export default {
       cmtData: [],
       parentCmtData: '',
       tagBg: ['#f9c100', '#4ca80b', '#ff7500', '#ee303a', '#0ab3af', '#fc4a00', '#0085FF', '#6555E2'],
-      defaultImgSrc: require('@/assets/img/bg-6.png')
+      defaultImgSrc: require('../../assets/img/bg-6.png')
     }
   },
   methods: {
@@ -137,7 +137,8 @@ export default {
     // 上下篇文章切换
     togglePost (post) {
       this.$router.push({
-        path: `/${post.parent}/${post._id}`
+        name: 'post',
+        params: { type: post.parent, id: post._id }
       })
     },
     // 获取文章评论数据
@@ -179,16 +180,13 @@ export default {
             content: filterStr(obj.content)
           }).then(res => {
             if(res.data.code === 200 && res.data.data._id) {
-              this.$message({
-                type: 'success',
-                message: '发布成功'
-              })
+              alert('发布成功')
               this.$refs.form.$children[0].$el[0].value = ''
               this.$refs.form.$children[0].$el[1].value = ''
               this.$refs.form.$children[0].$el[2].value = ''
               this.$router.go(0)
             } else {
-              this.$message(`发布失败，${res.data.data}`)
+              alert('发布失败')
             }
           })
         })
@@ -211,13 +209,10 @@ export default {
               this.$refs.form.$children[0].$el[1].value = ''
               this.$refs.form.$children[0].$el[2].value = ''
               this.parentCmtData = ''
+              alert('发布成功')
               this.$router.go(0)
-              this.$message({
-                type: 'success',
-                message: '发布成功'
-              })
             } else {
-              this.$message(`发布失败，${res.data.data}`)
+              alert('发布失败')
             }
           })
         })

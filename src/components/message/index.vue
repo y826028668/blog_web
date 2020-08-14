@@ -73,19 +73,13 @@ export default {
         }).then(res => {
           let data = res.data
           if(data.data === '留言成功') {
-            this.$message({
-              message: '留言成功',
-              type: 'success'
-            })
+            alert('留言成功')
             this.$refs.handlerForm.successMsg()
             this.getMsgData()
           } else if(data.data === '留言失败'){
-            this.$message({
-              message: '留言失败，请重试',
-              type: 'warning'
-            })
+            alert('留言失败，请重试')
           } else{
-            this.$message('昵称重复')
+            alert('昵称重复')
           }
         })
       }).catch(() => {

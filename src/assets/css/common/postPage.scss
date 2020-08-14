@@ -406,10 +406,13 @@
             .btn-next{
               background-color: transparent;
             }
+            .el-pager li:not(.disabled):hover{
+              color: #3545ee !important;
+            }
             .el-pager li:not(.disabled).active{
-              border-radius: 50%;
-              background: #3545ee;
-              font-size: 1.6rem;
+              border-radius: 50% !important;
+              background: #3545ee !important;
+              font-size: 1.6rem !important;
             }
           }
         }

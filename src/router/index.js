@@ -23,19 +23,9 @@ const routes = [
         component: () => import(/* webpackChunkName: "skill" */ '../components/skill/index.vue')
       },
       {
-        path: 'skill/:id',
-        name: 'skillType',
-        component: () => import(/* webpackChunkName: "post" */ '../components/postPage/postPage.vue')
-      },
-      {
         path: 'share',
         name: 'share',
         component: () => import(/* webpackChunkName: "share" */ '../components/share/index.vue')
-      },
-      {
-        path: 'share/:id',
-        name: 'shareType',
-        component: () => import(/* webpackChunkName: "post" */ '../components/postPage/postPage.vue')
       },
       {
         path: 'about',
@@ -57,6 +47,11 @@ const routes = [
         name: 'searchresult',
         component: () => import(/* webpackChunkName: "search" */ '../components/searchResult/index.vue')
       },
+      {
+        path: 'post/:type/:id',
+        name: 'post',
+        component: () => import(/* webpackChunkName: "post" */ '../components/postPage/postPage.vue')
+      }
     ]
   },
   {

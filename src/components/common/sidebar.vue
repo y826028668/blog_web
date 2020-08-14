@@ -4,7 +4,7 @@
       <div class="title">热门文章</div>
       <ul>
         <li class="clearboth" v-for="post in hotPostList" :key="post._id">
-          <router-link :to="{name: post.parent + 'Type', params: { id: post._id }}">
+          <router-link :to="{name: 'post', params: { type: post.parent, id: post._id }}">
             <div class="img_wrap">
               <img :src="post.imgSrc || defaultImgSrc">
             </div>
@@ -15,7 +15,7 @@
     </div>
     <div class="hotTags">
       <div class="title">热门标签</div>
-      <div class="tag" v-for="item in hotTags" :key="item.tag">
+      <div @click="backtop" class="tag" v-for="item in hotTags" :key="item.tag">
         <router-link :to="{name: 'searchresult', params: { text: item.tag }}">
           <span>{{ item.tag }}</span>
         </router-link>
@@ -40,6 +40,9 @@ export default {
     }
   },
   methods: {
+    backtop () {
+      window.scrollTo(0,0)
+    },
     // 获取热门文章
     getHotPosts () {
       api.getHotPost().then(res => {

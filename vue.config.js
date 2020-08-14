@@ -1,8 +1,7 @@
-const path = require('path')
 module.exports = {
-  publicPath: path.resolve(__dirname, './'),
-  productionSourceMap: false,
-  lintOnSave: true,
+  publicPath: '../../',
+  productionSourceMap: true,
+  lintOnSave: false,
   css: {
     loaderOptions: {
       scss: {
