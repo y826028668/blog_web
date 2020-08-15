@@ -19,11 +19,11 @@
   10. 轮播图
 
 ## 技术栈：
-框架：vue
-界面ui：element-ui
-网络请求：axios
-样式处理：sass
-工具/插件：animate.css(简单动画)、md5(加密)、moment(时间格式化)、wangeditor(富文本编辑器)
+框架：vue<br>
+界面ui：element-ui<br>
+网络请求：axios<br>
+样式处理：sass<br>
+工具/插件：animate.css(简单动画)、md5(加密)、moment(时间格式化)、wangeditor(富文本编辑器)<br><br>
 
 ## 目录结构
 ```
