@@ -47,7 +47,9 @@ src
 ```
 
 ## 界面展示
-* PC
+* **PC**
+<br><br>
+
 ![avatar](https://s1.ax1x.com/2020/08/14/dikvHf.png)
 ![avatar](https://s1.ax1x.com/2020/08/14/diAp4g.png)
 ![avatar](https://s1.ax1x.com/2020/08/14/dikzE8.png)
@@ -56,6 +58,9 @@ src
 <br><br>
 
 
-* Phone
+* **Phone**
+<br><br>
+
+
 ![avatar](https://s1.ax1x.com/2020/08/14/diASUS.png)
 ![avatar](https://s1.ax1x.com/2020/08/14/diACCQ.png)
